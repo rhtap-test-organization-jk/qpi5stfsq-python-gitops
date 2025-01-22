@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qpi5stfsq-python-gitops
+  description: This is GitOps manifest for qpi5stfsq-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qpi5stfsq-python
+    backstage.io/kubernetes-id: qpi5stfsq-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: qpi5stfsq-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qpi5stfsq-python
